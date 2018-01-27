@@ -27,17 +27,17 @@
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
 }
-/*右箭头*/
+/*左右箭头*/
 @font-face{
-    font-family: 'iconfont-r';
-    src: url('../img/font-icon/iconfont_r.eot');
-    src: url('../img/font-icon/iconfont_r.eot?#iefix') format('embedded-opentype'),
-    url('../img/font-icon/iconfont_r.woff') format('woff'),
-    url('../img/font-icon/iconfont_r.ttf') format('truetype'),
-    url('../img/font-icon/iconfont_r.svg#iconfont') format('svg');
+    font-family: 'iconfont-jiantou-lr';
+    src: url('../img/font-icon/iconfont_jiantou_lr.eot');
+    src: url('../img/font-icon/iconfont_jiantou_lr.eot?#iefix') format('embedded-opentype'),
+    url('../img/font-icon/iconfont_jiantou_lr.woff') format('woff'),
+    url('../img/font-icon/iconfont_jiantou_lr.ttf') format('truetype'),
+    url('../img/font-icon/iconfont_jiantou_lr.svg#iconfont') format('svg');
 }
-.iconfont_r{
-    font-family:"iconfont-r" !important;
+.iconfont_jiantou_lr{
+    font-family:"iconfont-jiantou-lr" !important;
     font-size:16px;font-style:normal;
     -webkit-font-smoothing: antialiased;
     -webkit-text-stroke-width: 0.2px;
@@ -76,7 +76,7 @@
 }
 #shortcut .fl .position.dropdown{
     height: 30px;
-    z-index: 2;
+    z-index: 4;
     background: #fff;
     border-top: 1px solid #ccc;
     border-left: 1px solid #ccc;
@@ -91,7 +91,7 @@
     top: 30px;
     border: 1px solid #ccc;
     background: #fff;
-    z-index: 1;
+    z-index: 3;
 }
 #shortcut .fl .all-position li{
     float: left;
@@ -155,7 +155,7 @@
     border: 1px solid #ccc;
     border-bottom: none;
     height: 30px;
-    z-index: 2;
+    z-index: 3;
 }
 #shortcut .fr .fore3 .myjd_layout{
     display: none;
@@ -167,7 +167,7 @@
     width: 267px;
     border: 1px solid #ccc;
     background: #fff;
-    z-index: 1;
+    z-index: 4;
 }
 #shortcut .fr .fore3 .myjd_layout .top{
     padding-left: 15px;
@@ -189,7 +189,7 @@
     border: 1px solid #ccc;
     border-bottom: none;
     height: 30px;
-    z-index: 2;
+    z-index: 3;
 }
 #shortcut .fr .fore6 .service_layout{
     display: none;
@@ -200,7 +200,7 @@
     padding: 10px 0 10px 17px;
     border: 1px solid #ccc;
     background: #fff;
-    z-index: 1;
+    z-index: 4;
 }
 #shortcut .fr .fore6 .service_layout .client{
     height: 120px;
@@ -365,6 +365,7 @@
     padding-left: 50px;
 }
 /******************fs***************************/
+/*菜单*/
 #fs{
     position: relative;
     background: #f0f3ef;
@@ -401,6 +402,10 @@
     padding-left: 18px;
     height: 28px;
     line-height: 28px;
+    z-index: 3;
+}
+#fs .fs_inner .fs_list .fs_list_title li.hover{
+    background-color: #d9d9d9;
 }
 #fs .fs_inner .fs_list .fs_list_title li,
 #fs .fs_inner .fs_list .fs_list_title li span{
@@ -412,14 +417,22 @@
     color: #e33333;;
 }
 #fs #fs_list_layout_item{
-    padding: 20px 0 10px 20px;
+    display: none;
     position: absolute;
-    left: 190px;
+    left: 185px;
     top: 0;
-    width: 998px;
+    width: 985px;
+    min-height: 478px;
+    background-color: #f7f7f7;
+    z-index: 3;
+}
+#fs #fs_list_layout_item .list_layout_item{
+    display: none;
+    padding: 20px 0 10px 20px;
     min-height: 478px;
     border: 1px solid #f7f7f7;
-    background-color: #f7f7f7;
+    box-shadow: 2px 0 5px rgba(0,0,0,.3);
+    z-index: 3;
 }
 #fs_list_layout_item .list_main{
     margin-bottom: 10px;
@@ -478,6 +491,102 @@
     height: 35px;
     margin: 0 0 1px 1px;
     background-color: #e7e7e7;
+}
+/*轮播*/
+#fs .slide_wrap{
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    width: 590px;
+    height: 480px;
+}
+#fs .slide_wrap .slide_list{
+    margin-top: 10px;
+    width: 590px;
+    height: 470px;
+    /*overflow: hidden;*/
+}
+#fs .slide_img{
+    position: relative;
+    width: 5900px;
+    height: 470px;
+    transform: translate3d(0px, 0px, 0px);
+    transition: none;
+}
+#fs .slide_img li{
+    position: absolute;
+    float: left;
+}
+#fs .slide_img li a{
+    display: block;
+}
+#fs .slide_wrap .slide_lr_button{
+    position: absolute;
+    border: none;
+    outline: none;
+    top: 50%;
+    transform: translate(-50%,0);
+    z-index: 2;
+    width: 24px;
+    height: 40px;
+    background-color: rgba(0,0,0,.2);
+    color: #fff;
+    color: hsla(0,0%,100%,.4);
+    line-height: 40px;
+    text-align: center;
+}
+#fs .slide_wrap .slide_left_button{
+    left: 0;
+    margin-left: 11px;
+}
+#fs .slide_wrap  .slide_right_button{
+    right: 0;
+    margin-right: -11px;
+}
+#fs .slide_indicators{
+    position: absolute;
+    left: 46px;
+    bottom: 10px;
+}
+#fs .slide_indicators .slide_indicators_btn{
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+#fs .slide_indicators .slide_indicators_btn:after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 6px;
+    height: 6px;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid #b9beba;
+    -webkit-transition: all .2s ease;
+    -o-transition: all ease .2s;
+    -moz-transition: all ease .2s;
+    transition: all .2s ease;
+}
+#fs .slide_indicators .slide_indicators_btn.slide_indicators_active{
+    background: rgba(255,255,255,0.2);
+}
+#fs .slide_indicators .slide_indicators_btn.slide_indicators_active:after{
+    width: 10px;
+    height: 10px;
+    border: none;
+    background: #fff;
+}
+#fs .slide_indicators .slide_indicators_btn,
+#fs .slide_indicators .slide_indicators_btn:after{
+    -webkit-transition: background .2s ease;
+    -o-transition: background ease .2s;
+    -moz-transition: background ease .2s;
+    transition: background .2s ease;
 }
 /*===========全局样式===========*/
 .style-red{

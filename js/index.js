@@ -46,3 +46,33 @@ function mouseleave($button,$block,$btn){
         $btn.removeClass("dropdown");
     });
 }
+/******************fs***************************/
+var $fs_list = $(".fs_list"),
+    $fs_list_li = $("#fs .fs_list .fs_list_title li"),
+    $fs_list_layout_wrap = $("#fs_list_layout_item"),
+    $fs_list_layout = $("#fs .fs_list #fs_list_layout_item .list_layout_item");
+
+$fs_list_li.on("mouseenter",function(){
+    var index = $(this).index();
+    $(this).siblings().removeClass("hover");
+    $(this).addClass("hover");
+    $fs_list_layout_wrap.css("display","block");
+    $fs_list_layout.eq(index).siblings().css("display","none");
+    $fs_list_layout.eq(index).css("display","block");
+})
+$fs_list_layout.on("mouseenter",function(){
+    var index = $(this).index();
+    $(this).siblings().css("display","none");
+    $fs_list_li.eq(index).addClass("hover");
+})
+$fs_list_layout.on("mouseleave",function(){
+    var index = $(this).index();
+    $fs_list_layout_wrap.css("display","none");
+    $(this).css("display","none");
+    $fs_list_li.eq(index).removeClass("hover");
+})
+$fs_list.on("mouseleave",function(){
+    $fs_list_li.removeClass("hover");
+    $fs_list_layout_wrap.css("display","none");
+    $fs_list_layout.css("display","none");
+})
