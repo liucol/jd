@@ -54,7 +54,10 @@ var $fs_list = $(".fs_list"),
     $slide_li = $(".slide_list .slide_img li"),  //轮播图片li
     $slide_left_button = $(".slide_wrap .slide_left_button"), //轮播上的左箭头
     $slide_right_button = $(".slide_wrap .slide_right_button"), //轮播上的右箭头
-    $slide_indicators_btn = $(".slide_wrap .slide_indicators_btn");  //轮播西面的小圆点
+    $slide_indicators_btn = $(".slide_wrap .slide_indicators_btn"),  //轮播西面的小圆点
+    $tab_head_item = $("#J_news .mod_tab_head_item"),
+    $tab_content_item = $("#J_news .mod_tab_content_item"),
+    $news_tab_active = $("#J_news .news_tab_active");
 
 //菜单
 $fs_list_li.on("mouseenter",function(){
@@ -167,3 +170,15 @@ function slide(){
         clearTimeout(slideTime3);
     }
 }
+//促销&&公告
+$tab_head_item.on("mouseenter",function(){
+    var tabindex = $(this).index();
+    $tab_content_item.eq(tabindex).siblings().css("display","none");
+    $tab_content_item.eq(tabindex).css("display","block");
+    if(tabindex == 1){
+        $news_tab_active.css("transform","translateX(58px)");
+    }else if(tabindex == 0){
+        $news_tab_active.css("transform","translateX(0)");
+    }
+})
+
