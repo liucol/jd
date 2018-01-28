@@ -516,12 +516,25 @@
 #fs .slide_img li{
     position: absolute;
     float: left;
+    opacity: 0;
+    -webkit-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    transition: opacity .5s;
+}
+#fs .slide_img .slide_img_active{
+    opacity: 1;
+    -webkit-transition: opacity 500ms ease-in-out;
+    -o-transition: opacity 500ms ease-in-out;
+    -moz-transition: opacity 500ms ease-in-out;
+    transition: opacity 500ms ease-in-out;
 }
 #fs .slide_img li a{
     display: block;
 }
 #fs .slide_wrap .slide_lr_button{
     position: absolute;
+    padding-top: 2px;
     border: none;
     outline: none;
     top: 50%;
@@ -535,18 +548,26 @@
     line-height: 40px;
     text-align: center;
 }
+#fs .slide_wrap .slide_lr_button:hover{
+    background-color: rgba(0,0,0,.5);
+}
+#fs .slide_wrap .slide_lr_button i{
+    font-size: 20px;
+    font-weight: 400;
+}
 #fs .slide_wrap .slide_left_button{
     left: 0;
-    margin-left: 11px;
+    margin-left: 12px;
 }
 #fs .slide_wrap  .slide_right_button{
     right: 0;
-    margin-right: -11px;
+    margin-right: -12px;
 }
 #fs .slide_indicators{
     position: absolute;
     left: 46px;
     bottom: 10px;
+    cursor: default;
 }
 #fs .slide_indicators .slide_indicators_btn{
     position: relative;
