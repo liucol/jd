@@ -184,7 +184,9 @@ $tab_head_item.on("mouseenter",function(){
 /******************京东秒杀***************************/
 var $seckill_btn_prev = $("#J_seckill .slider_control_prev"),
     $seckill_btn_next = $("#J_seckill .slider_control_next"),
-    $slider_wrapper = $("#J_seckill .slider_wrapper");
+    $slider_wrapper = $("#J_seckill .slider_wrapper"),
+    $sk_chn_slideWrap = $("#J_seckill .sk_chn_slideWrap"),  //倒计时后面自动滚动轮播的包裹层
+    $slider_indicators_btn = $("#J_seckill .slider_indicators_btn");
 
 var positionindex = 1;
 $seckill_btn_prev.on("click",function(){
@@ -207,3 +209,47 @@ $seckill_btn_next.on("click",function(){
         }
     });
 })
+//轮播
+var seckillSlideindex = 0;
+var seckillSlideTime1,
+    seckillSlideTime2,
+    seckillSlideBtnTime;
+
+seckillSlideTime1 = setInterval(function(){
+    seckillSlide();
+},3000);
+function seckillSlide(){
+    seckillSlideindex = seckillSlideindex +1;
+    var range =  -180 * seckillSlideindex;
+    $sk_chn_slideWrap.animate({left: range+'px'},"3s",function () {
+        if(seckillSlideindex == 2){
+            $sk_chn_slideWrap.css("left","0px");
+            seckillSlideindex = 0;
+        }
+        $slider_indicators_btn.eq(seckillSlideindex).siblings().removeClass("slider_indicators_btn_active");
+        $slider_indicators_btn.eq(seckillSlideindex).addClass("slider_indicators_btn_active");
+    });
+}
+$slider_indicators_btn.on("mouseenter",function(){
+    seckillSlideClearTime();
+    var $thisIndex = $(this).index(),
+        thisrange = $thisIndex *180;
+
+    seckillSlideindex = $thisIndex;
+
+    $sk_chn_slideWrap.animate({left: -thisrange+'px'},"3s",function () {
+        $slider_indicators_btn.eq($thisIndex).siblings().removeClass("slider_indicators_btn_active");
+        $slider_indicators_btn.eq($thisIndex).addClass("slider_indicators_btn_active");
+        seckillSlideBtnTime = setTimeout(function(){
+            seckillSlideTime2 = setInterval(function(){
+                seckillSlide();
+            },3000);
+        },4000);
+    });
+})
+
+function seckillSlideClearTime(){
+    clearInterval(seckillSlideTime1);
+    clearInterval(seckillSlideTime2);
+    clearTimeout(seckillSlideBtnTime);
+}

@@ -1103,9 +1103,15 @@
     bottom: 0;
     width: 6px;
     height: 6px;
-    background: #e33333;
+    background: #c0c0c0;
     border-radius: 50%;
     z-index: 2;
+}
+.slider_indicators .slider_indicators_btn_active{
+    background: #e33333;
+}
+.slider_indicators .slider_indicators_btn:nth-child(1){
+    margin-right: 10px;
 }
 
 
