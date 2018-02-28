@@ -182,11 +182,30 @@ $tab_head_item.on("mouseenter",function(){
     }
 })
 /******************京东秒杀***************************/
-var $seckill_btn_prev = $("#J_seckill .slider_control_prev"),
+var $cd_minute = $("#J_seckill .cd_minute span"),
+    $cd_second = $("#J_seckill .cd_second span"),
+    $seckill_btn_prev = $("#J_seckill .slider_control_prev"),
     $seckill_btn_next = $("#J_seckill .slider_control_next"),
     $slider_wrapper = $("#J_seckill .slider_wrapper"),
     $sk_chn_slideWrap = $("#J_seckill .sk_chn_slideWrap"),  //倒计时后面自动滚动轮播的包裹层
     $slider_indicators_btn = $("#J_seckill .slider_indicators_btn");
+
+//倒计时
+var timeflag = setInterval(function(){
+    var second = parseInt($cd_second.text()),
+        minute = parseInt($cd_minute.text());
+    if(minute == 00){
+        clearInterval(timeflag);
+    }else{
+        if(second == 00){
+            $cd_minute.text(minute-1);
+            $cd_second.text("60");
+        }else{
+            $cd_second.text(second-1);
+        }
+    }
+},1000);
+
 
 var positionindex = 1;
 $seckill_btn_prev.on("click",function(){
