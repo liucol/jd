@@ -181,4 +181,29 @@ $tab_head_item.on("mouseenter",function(){
         $news_tab_active.css("transform","translateX(0)");
     }
 })
+/******************京东秒杀***************************/
+var $seckill_btn_prev = $("#J_seckill .slider_control_prev"),
+    $seckill_btn_next = $("#J_seckill .slider_control_next"),
+    $slider_wrapper = $("#J_seckill .slider_wrapper");
 
+var positionindex = 1;
+$seckill_btn_prev.on("click",function(){
+    positionindex = positionindex -1;
+    var range =  -800 * positionindex;
+       $slider_wrapper.animate({left: range+'px'},"1s",function () {
+           if(positionindex == 0){
+               $slider_wrapper.css("left","-4000px");
+               positionindex = 5;
+           }
+       });
+})
+$seckill_btn_next.on("click",function(){
+    positionindex = positionindex + 1;
+    var range =  -800 * positionindex;
+    $slider_wrapper.animate({left: range+'px'},"1s",function () {
+        if(positionindex == 6){
+            $slider_wrapper.css("left","-800px");
+            positionindex = 1;
+        }
+    });
+})

@@ -8,7 +8,7 @@
     margin: auto;
     width: 1190px;
 }
-.index{
+#index{
     background-color: #f0f3ef;
 }
 /*字体图标*/
@@ -367,6 +367,7 @@
 /******************fs***************************/
 /*菜单*/
 #fs{
+    margin-bottom: 30px;
     position: relative;
     background: #f0f3ef;
 }
@@ -395,7 +396,7 @@
     margin-right: 10px;
     padding: 15px 0;
     width: 190px;
-    height: 480px;
+    height: 450px;
     background: #fff;
 }
 #fs .fs_inner .fs_list .fs_list_title li{
@@ -491,6 +492,14 @@
     height: 35px;
     margin: 0 0 1px 1px;
     background-color: #e7e7e7;
+}
+#fs_list_layout_item .list_layout_ad .min_ad a img{
+    width: 83px;
+    height: 35px;
+}
+#fs_list_layout_item .max_ad_f{
+    display: inline-block;
+    margin-bottom: 3px;
 }
 /*轮播*/
 #fs .slide_wrap{
@@ -632,11 +641,12 @@
     float: right;
     width: 190px;
     height: 470px;
-    background: #fff;
+    /*background: #fff;*/
 }
 #fs .fs_col4 .user_login{
     height: 160px;
     text-align: center;
+    background: #fff;
 }
 #fs .fs_col4 .user_login .user_img{
     position: relative;
@@ -712,6 +722,7 @@
 }
 #J_news{
     height: 150px;
+    background: #fff;
 }
 #J_news .mod_tab_head {
     padding: 17px 0 0;
@@ -793,7 +804,312 @@
 #J_news .news_item:hover{
     color: #c81623;
 }
-/*===========全局样式===========*/
+#J_service{
+    background: #fff;
+}
+#J_service .service_entry{
+    padding: 10px 15px 15px;
+    height: 135px;
+}
+#J_service .service_entry ul{
+    height: 135px;
+}
+#J_service .service_item{
+    float: left;
+    position: relative;
+    width: 40px;
+    height: 45px;
+    text-align: center;
+}
+#J_service .service_item .service_icon{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../img/image/sprite.service@2x.png") no-repeat;
+    background-size: 103px 77px;
+}
+#J_service .service_item .service_item_content_wrap{
+    position: relative;
+    height: 28px;
+    overflow: hidden;
+}
+#J_service .service_item .service_item_content_wrap:hover .service_item_content{
+    top: -24px;
+}
+#J_service .service_item .service_item_content{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 40px;
+    -webkit-transform: translate( -50%,0);
+    -moz-transform: translate( -50%,0);
+    -ms-transform: translate( -50%,0);
+    -o-transform: translate( -50%,0);
+    transform: translate( -50%,0);
+    transition: all .2s linear;
+    cursor: pointer;
+}
+#J_service .service_item .service_text{
+    background: #bea68d;
+    color: #fff;
+    height: 20px;
+    line-height: 20px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#J_service .service_item .service_ico_huafei{
+    background-position: -26px 2px;
+}
+#J_service .service_item .service_ico_jipiao{
+    background-position: 0 -52px;
+}
+#J_service .service_item  .service_ico_youxi{
+    background-position: -26px -24px;
+}
+#J_service .service_item .service_ico_qyg{
+    background-position: -52px 2px;
+}
+#J_service .service_item .service_ico_jiayou{
+    background-position: -54px -26px;
+}
+#J_service .service_item .service_ico_dianying{
+    background-position: 0 -26px;
+}
+#J_service .service_item .service_ico_huoche{
+    background-position: -26px -52px;
+}
+#J_service .service_item .service_ico_zhongchou{
+    background-position: -50px -52px;
+}
+#J_service .service_item .service_ico_licai{
+    background-position: -78px 2px;
+}
+#J_service .service_item .service_ico_lipin{
+    background-position: -78px -25px;
+}
+#J_service .service_item .service_ico_baitiao{
+    background-position: -78px -52px;
+}
+/******************京东秒杀***************************/
+.sk{
+    height: 275px;
+    margin-bottom: 30px;
+}
+.sk_inner{
+    margin: 0 auto;
+    width: 1190px;
+}
+.sk_hd{
+    float: left;
+    width: 190px;
+    height: 275px;
+    background: #e83632;
+    color: #fff;
+}
+.sk_hd p{
+    text-align: center;
+}
+.sk_tit{
+    margin-top: 42px;
+    font-size: 34px;
+}
+.sk_subtit{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+}
+.sk_ico{
+    display: inline-block;
+    margin: 5px 0;
+    width: 20px;
+    height: 33px;
+    background-image: url("../img/image/sprite.seckill.png");
+    background-position: -35px -25px;
+}
+.sk_desc{
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.sk_cd{
+    margin: 0 auto;
+    height: 40px;
+    width: 130px;
+}
+.cd_item{
+    float: left;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: #2f3430;
+    margin-right: 5px;
+}
+.cd_item:nth-child(3){
+    margin-right: 0;
+}
+.cd_item .cd_item_txt{
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 20px;
+}
+#J_seckill .sk_list{
+    position: relative;
+    float: left;
+    width: 800px;
+    height: 275px;
+    overflow: hidden;
+}
+#J_seckill .slider_wrapper{
+    position: absolute;
+    height: 275px;
+    width: 5600px;
+    left: -800px;
+}
+#J_seckill .slider_item{
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 275px;
+    background: #fff;
+}
+#J_seckill .slider_item:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 275px;
+    background: #f0f0f0;
+}
+#J_seckill .sk_item_img{
+    padding-top: 40px;
+}
+#J_seckill .sk_item_lk{
+    text-decoration: none;
+    position: relative;
+    display: block;
+    width: 190px;
+    height: 275px;
+    text-align: center;
+    margin: auto;
+    color: #666;
+}
+#J_seckill .sk_item_name{
+    width: 160px;
+    padding: 0 15px;
+    line-height: 30px;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#J_seckill .sk_item_price{
+    position: absolute;
+    margin-left: 13px;
+    margin-top: 10px;
+    width: 160px;
+    height: 20px;
+    padding: 1px;
+    background: #e6382f;
+    line-height: 20px;
+}
+#J_seckill .sk_item_price .sk_item_price_new{
+    float: left;
+    width: 80px;
+    height: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
+#J_seckill .sk_item_price .sk_item_price_origin{
+    float: left;
+    width: 80px;
+    height: 20px;
+    background: #fff;
+    text-align: center;
+    color: #b7bcb8;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+#J_seckill .slider_control{
+    position: absolute;
+    top: 50%;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    width: 20px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #d9d9d9;
+    background-color: rgba(0,0,0,.15);
+    margin-top: -20px;
+    font-size: 20px;
+    z-index: 2;
+    border: none;
+    outline: none;
+    -webkit-transition: background-color .2s ease;
+    -o-transition: background-color ease .2s;
+    -moz-transition: background-color ease .2s;
+    transition: background-color .2s ease;
+}
+#J_seckill .slider_control:hover{
+    background-color: rgba(0,0,0,.4);
+}
+#J_seckill .slider_control i {
+    color: #fff;
+    color: hsla(0,0%,100%,.4);
+    -webkit-transition: color .2s ease;
+    -o-transition: color ease .2s;
+    -moz-transition: color ease .2s;
+    transition: color .2s ease;
+}
+#J_seckill .slider_control_next{
+    right: 0;
+}
+#J_seckill .sk_chn{
+    padding: 8px 10px 7px;
+    float: left;
+    width: 180px;
+    height: 260px;
+    background-color: #ffffff;
+}
+#J_seckill .sk_chn .sk_chn_inner{
+    position: relative;
+    width: 180px;
+    height: 260px;
+    overflow: hidden;
+}
+#J_seckill .sk_chn .sk_chn_slideWrap{
+    position: absolute;
+    width: 540px;
+    font-size: 0;
+}
+.sk_chn .sk_chn_slideWrap a{
+    display: inline-block;
+    width: 180px;
+}
+.sk_chn .sk_chn_slideWrap  .sk_chn_img{
+    width: 180px;
+}
+.slider_indicators{
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    font-size: 0;
+    text-align: center;
+}
+.slider_indicators .slider_indicators_btn{
+    display: inline-block;
+    bottom: 0;
+    width: 6px;
+    height: 6px;
+    background: #e33333;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+
+    /*===========全局样式===========*/
 .style-red{
     color: #f10215;
 }
