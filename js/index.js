@@ -209,7 +209,7 @@ var timeflag = setInterval(function(){
         }else{
             $cd_second.text(second-1);
         }
-        
+
 },1000);
 
 
