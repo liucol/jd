@@ -1125,6 +1125,9 @@
     margin-right: 10px;
 }
 /******************觅me***************************/
+.corechn2{
+    height: 480px;
+}
 .grid_c1{
     margin: 0 auto;
     width: 1190px;
@@ -1301,6 +1304,55 @@
     width: 110px;
     height: 110px;
     margin: 0 5px;
+}
+/******************智能先锋***************************/
+#J_tech .floorhd{
+    height: 65px;
+}
+#J_tech .grid_c1{
+    margin: 0 auto;
+    width: 1190px;
+}
+#J_tech .floorhd_tit{
+    position: relative;
+    width: 150px;
+    height: 45px;
+    font-size: 28px;
+    font-family: 'fzzzh';
+    font-weight: normal;
+    text-align: center;
+    line-height: 45px;
+    padding: 0 50px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    color: #222;
+}
+#J_tech .floorhd_tit:before,
+#J_tech .floorhd_tit:after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    display: block;
+    background: #222;
+    top: 19px;
+}
+#J_tech .floorhd_tit:before{
+    left: 0;
+}
+#J_tech .floorhd_tit:after{
+    right: 0;
+}
+#J_tech .chn{
+    height: 480px;
+}
+#J_tech .sort,
+#J_tech .tactic,
+#J_tech .act{
+    background: #ffffff;
+}
+#J_tech .box_last{
+    margin-right: 0;
 }
     /*===========全局样式===========*/
 .style-red{
