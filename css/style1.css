@@ -1354,6 +1354,55 @@
 #J_tech .box_last{
     margin-right: 0;
 }
+#J_tech .sort_wrapper{
+    margin: 0 0 0 20px;
+}
+#J_tech .sort_middle{
+    float: left;
+    display: block;
+    width: 170px;
+    height: 180px;
+    margin: 0 10px 10px 0;
+    -webkit-transition: opacity ease .2s;
+    -o-transition: opacity ease .2s;
+    -moz-transition: opacity ease .2s;
+    transition: opacity ease .2s;
+}
+#J_tech .sort_small_wrapper{
+    float: left;
+    width: 348px;
+    border: solid #ebeaea;
+    border-width: 0 1px 1px 0;
+    overflow: hidden;
+}
+#J_tech .sort_small{
+    float: left;
+    width: 86px;
+    height: 58px;
+    text-align: center;
+    line-height: 58px;
+    font-size: 0;
+    overflow: hidden;
+    border: solid #ebeaea;
+    border-width: 1px 0 0 1px;
+    -webkit-transition: opacity ease .2s;
+    -o-transition: opacity ease .2s;
+    -moz-transition: opacity ease .2s;
+    transition: opacity ease .2s;
+}
+#J_tech .sort_small_img{
+    background: #fff;
+    width: 66px;
+    margin: auto;
+    text-align: center;
+    line-height: 58px;
+    font-size: 0;
+
+}
+#J_tech .sort_middle:hover,
+#J_tech .sort_small:hover{
+    opacity: .8;
+}
     /*===========全局样式===========*/
 .style-red{
     color: #f10215;
