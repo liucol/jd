@@ -194,16 +194,22 @@ var $cd_minute = $("#J_seckill .cd_minute span"),
 var timeflag = setInterval(function(){
     var second = parseInt($cd_second.text()),
         minute = parseInt($cd_minute.text());
-    if(minute == 00){
-        clearInterval(timeflag);
-    }else{
+
         if(second == 00){
-            $cd_minute.text(minute-1);
+            if(minute == 00){
+                clearInterval(timeflag);
+            }else{
+                $cd_minute.text(minute-1);
+                var nowminute = parseInt($cd_minute.text());
+                if(nowminute == 0){
+                    $cd_minute.text("00");
+                }
+            }
             $cd_second.text("60");
         }else{
             $cd_second.text(second-1);
         }
-    }
+        
 },1000);
 
 
