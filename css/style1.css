@@ -1516,6 +1516,21 @@
     overflow: hidden;
     color: #e33333;
 }
+.sort_large_img{
+    -webkit-transition: opacity ease .2s;
+    -o-transition: opacity ease .2s;
+    -moz-transition: opacity ease .2s;
+    transition: opacity ease .2s;
+}
+.sort_large_img:hover{
+    opacity: .8;
+}
+.sort_large{
+    display: block;
+    width: 350px;
+    height: 180px;
+    margin-bottom: 10px;
+}
     /*===========全局样式===========*/
 .style-red{
     color: #f10215;
