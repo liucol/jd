@@ -1454,6 +1454,14 @@
     top: 0;
     background: #f0f3ef;
 }
+#J_tech .act_multi .act_lk{
+    width: 340px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+#J_tech .act_multi .act_lk:before{
+    left: 0;
+}
     /*===========全局样式===========*/
 .style-red{
     color: #f10215;
