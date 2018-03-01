@@ -1279,6 +1279,29 @@
 #J_corechn2 .chosen_item_lk:hover .chosen_item_name{
     color: #c81623;
 }
+#J_masshop .masshop_lk{
+    display: inline-block;
+}
+#J_masshop .masshop_lk_img:hover,
+#J_masshop .masshop_item:hover{
+    opacity: .8;
+}
+#J_masshop .masshop_cover{
+    width: 350px;
+    height: 250px;
+    margin: 0 auto;
+}
+#J_masshop .masshop_list{
+    width: 360px;
+    overflow: hidden;
+    margin: 10px auto 0;
+}
+#J_masshop .masshop_item{
+    float: left;
+    width: 110px;
+    height: 110px;
+    margin: 0 5px;
+}
     /*===========全局样式===========*/
 .style-red{
     color: #f10215;
