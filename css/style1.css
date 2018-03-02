@@ -1588,6 +1588,57 @@
 .mod_service_sheng{
     background-position: 0 -129px;
 }
+.mod_help{
+    padding: 20px 0;
+}
+.mod_help_inner{
+    margin: 0 auto;
+    width: 1190px;
+}
+.mod_help_list{
+    overflow: hidden;
+    height: 160px;
+}
+.mod_help_nav{
+    float: left;
+    width: 198px;
+    line-height: 22px;
+    color: #666;
+}
+.mod_help_nav_tit{
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.mod_help_nav_con a:hover{
+    cursor: pointer;
+    color: #c81623;
+}
+.mod_help_cover{
+    float: right;
+    width: 200px;
+    height: 150px;
+    background: url("../img/image/J_footer/ico_footer.png") no-repeat 0 0;
+    color: #666;
+}
+.mod_help_cover_tit{
+    margin-bottom: 15px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+}
+.mod_help_cover_con{
+    padding: 0 10px;
+}
+.mod_help_cover_more{
+    text-align: right;
+}
+.mod_help_cover_more a i{
+    font-size: 12px;
+}
+.mod_help_cover_more a:hover{
+    color: #c81623;
+}
     /*===========全局样式===========*/
 .style-red{
     color: #f10215;
