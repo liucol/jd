@@ -1531,6 +1531,63 @@
     height: 180px;
     margin-bottom: 10px;
 }
+/******************底部***************************/
+#J_footer .mod_service{
+    padding: 30px 0;
+    border-bottom: 1px solid #DEDEDE;
+}
+#J_footer .grid_c1{
+    margin: 0 auto;
+    width: 1190px;
+}
+.mod_service_list{
+    overflow: hidden;
+    height: 42px;
+}
+.mod_service_item{
+    float: left;
+    width: 297px;
+}
+.mod_service_unit{
+    position: relative;
+    margin: 0 auto;
+    padding-left: 45px;
+    width: 180px;
+}
+.mod_service_tit{
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 36px;
+    height: 42px;
+    background-image: url("../img/image/J_footer/service_icon.png");
+    text-indent: -999px;
+}
+.mod_service_txt{
+    overflow: hidden;
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    font-size: 18px;
+    font-weight: 700;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #444;
+}
+.mod_service_duo{
+    background-position: 0 0;
+}
+.mod_service_kuai{
+    background-position: 0 -43px;
+}
+.mod_service_hao{
+    background-position: 0 -86px;
+}
+.mod_service_sheng{
+    background-position: 0 -129px;
+}
     /*===========全局样式===========*/
 .style-red{
     color: #f10215;
