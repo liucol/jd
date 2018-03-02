@@ -333,6 +333,10 @@
     white-space: nowrap;
     color: #999;
 }
+#header .search_hot li:hover{
+    color: #f10215;
+    cursor: pointer;
+}
 #header .search_hot .style-red{
     color: #f10215;
 }
@@ -346,6 +350,10 @@
     float: left;
     height: 40px;
     line-height: 40px;
+}
+#header .header_title_list li span:hover{
+    color: #f10215;
+    cursor: pointer;
 }
 #header .header_title_list li span{
     font-size: 14px;
