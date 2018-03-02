@@ -204,10 +204,15 @@ var timeflag = setInterval(function(){
                 if(nowminute == 0){
                     $cd_minute.text("00");
                 }
+                $cd_second.text("60");
             }
-            $cd_second.text("60");
         }else{
-            $cd_second.text(second-1);
+            var nowsecond = second-1;
+            if(nowsecond <10){
+                $cd_second.text("0"+nowsecond);
+            }else{
+                $cd_second.text(nowsecond);
+            }
         }
 
 },1000);
