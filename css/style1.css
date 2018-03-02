@@ -1639,6 +1639,55 @@
 .mod_help_cover_more a:hover{
     color: #c81623;
 }
+.mod_copyright_inner{
+    padding: 15px 0;
+    border-top: 1px solid #E1E1E1;
+    text-align: center;
+}
+.mod_copyright_split{
+    margin: 0 10px;
+    color: #CCC;
+}
+.mod_copyright_info{
+    padding: 10px 0;
+    line-height: 22px;
+    color: #999;
+}
+.mod_copyright_info p{
+    line-height: 22px;
+    color: #999;
+}
+.mod_copyright_info a{
+    color: #999;
+}
+.mod_copyright_auth_ico_1{
+    background-position: 0 -151px;
+}
+.mod_copyright_auth_ico_2 {
+    background-position: -104px -151px;
+}
+.mod_copyright_auth_ico_3 {
+    background-position: 0 -184px;
+}
+.mod_copyright_auth_ico_4 {
+    background-position: -104px -184px;
+}
+.mod_copyright_auth_ico_5 {
+    background-position: 0 -217px;
+}
+.mod_copyright_auth_ico_6 {
+    background-position: -104px -217px;
+}
+.mod_copyright_auth_ico{
+    overflow: hidden;
+    display: inline-block;
+    margin: 0 3px;
+    width: 103px;
+    height: 32px;
+    background-image: url("../img/image/J_footer/ico_footer.png");
+    line-height: 1000px;
+    color: #666;
+}
     /*===========全局样式===========*/
 .style-red{
     color: #f10215;
